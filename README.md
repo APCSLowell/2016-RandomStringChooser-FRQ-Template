@@ -1,1 +1,1 @@
-# GitHub-Classroom-Java-Template
+# GitHub Classroom Java Template
