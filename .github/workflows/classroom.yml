@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: parta1
         setup-command: ''
-        command: gradle test --tests "SoundTest.partA1"
+        command: gradle test --tests "RandomStringChooserTest.randomStringChooserTest"
         timeout: 10
         max-score: 1
     - name: partb
@@ -28,7 +28,7 @@ jobs:
       with:
         test-name: partb
         setup-command: ''
-        command: gradle test --tests "SoundTest.partB"
+        command: gradle test --tests "RandomLetterChooserTest.randomLetterChooserTest"
         timeout: 10
         max-score: 1
     - name: Autograding Reporter
