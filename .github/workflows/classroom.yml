@@ -22,11 +22,11 @@ jobs:
         command: gradle test --tests "SoundTest.partA1"
         timeout: 10
         max-score: 1
-    - name: parta
-      id: parta
+    - name: partb
+      id: partb
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: parta
+        test-name: partb
         setup-command: ''
         command: gradle test --tests "SoundTest.partB"
         timeout: 10
@@ -34,7 +34,7 @@ jobs:
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        PARTA_RESULTS: "${{steps.parta.outputs.result}}"
+        PARTA_RESULTS: "${{steps.parta1.outputs.result}}"
         PARTB_RESULTS: "${{steps.partb.outputs.result}}"
       with:
-        runners: parta1,parta2,parta3,parta4,partb1,partb2
+        runners: parta1,partb
